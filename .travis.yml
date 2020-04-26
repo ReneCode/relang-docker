@@ -4,6 +4,6 @@ services:
   - docker
 
 before_install:
-  - npm docker:build
+  - npm run docker:build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - npm docker:push
+  - npm run docker:push
