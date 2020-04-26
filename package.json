@@ -1,0 +1,16 @@
+{
+  "name": "azure-docker",
+  "version": "1.0.0",
+  "description": "test docker with azure",
+  "main": "index.js",
+  "config": {
+    "tag": "relang.azurecr.io/test/hello-world"
+  },
+  "scripts": {
+    "docker:build": "docker build -t $npm_package_config_tag .",
+    "docker:run": "docker run --rm -p 8080:80 $npm_package_config_tag",
+    "docker:push": "docker push $npm_package_config_tag"
+  },
+  "author": "",
+  "license": "ISC"
+}
