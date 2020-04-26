@@ -5,5 +5,5 @@ services:
 
 before_install:
   - npm run docker:build
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login relang.azurecr.io -u "$DOCKER_USERNAME" --password-stdin
   - npm run docker:push
